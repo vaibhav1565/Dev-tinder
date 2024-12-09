@@ -1,24 +1,17 @@
 {
   "name": "dev-tinder",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VAIBHAVMADAN1/dev-tinder.git"
-  },
   "author": "Vaibhav Madan",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VAIBHAVMADAN1/dev-tinder/issues"
-  },
-  "homepage": "https://github.com/VAIBHAVMADAN1/dev-tinder#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.0",
-    "mongoose": "^8.7.0"
+    "mongoose": "^8.8.3",
+    "validator": "^13.12.0"
   }
 }
