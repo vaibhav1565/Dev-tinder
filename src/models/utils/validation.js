@@ -14,4 +14,19 @@ const validateSignUpData = (req)=>{
     }
 }
 
-module.exports = {validateSignUpData}
+const validateEditProfileData = (req)=>{
+    const allowedEditFields = ["password", "age", "gender", "photoURL", "about", "skills"]
+
+    const isEditAllowed = Object.keys(req.body).every(field => allowedEditFields.includes(field))
+    return isEditAllowed
+}
+
+const validatePasswordChange = (req) => {
+    const {password} = req.body
+
+    if (!validator.isStrongPassword(password)){
+        throw new Error("Password must be of alteast 8 characters, consisting of atleast one uppercase, one lowercase, one number and one special symbol")
+    }
+}
+
+module.exports = {validateSignUpData, validateEditProfileData, validatePasswordChange}
